@@ -1,0 +1,19 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function drawRectGreen(x, y){
+        var screen = document.querySelector('canvas');
+        var pencil = screen.getContext('2d');
+
+        pencil.fillStyle = 'green';
+        pencil.fillRect(x, y, 50, 50);
+        pencil.fillStroke = 'black';
+        pencil.strokeRect(x, y, 50, 50);
+    }
+
+    for(var x = 0; x < 600; x = x + 50){
+        drawRectGreen(x, 50);
+    }
+
+</script>
